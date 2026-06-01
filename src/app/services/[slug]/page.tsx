@@ -19,8 +19,14 @@ export function generateMetadata({
   const service = getService(params.slug);
   if (!service) return { title: "Service Not Found" };
   return {
-    title: service.title,
+    title: `${service.title} in Abuja & Nigeria`,
     description: service.description,
+    alternates: { canonical: `/services/${service.slug}` },
+    openGraph: {
+      title: `${service.title} | Arcmarshal Dzine Koncept`,
+      description: service.description,
+      type: "article",
+    },
   };
 }
 

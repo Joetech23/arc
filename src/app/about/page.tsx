@@ -15,6 +15,7 @@ import {
 
 export const metadata: Metadata = {
   title: "About Us",
+  alternates: { canonical: "/about" },
   description:
     "Learn about Arcmarshal Dzine Koncept — a design and construction company in Abuja committed to sustainability, innovation and turning clients' dreams into reality.",
 };

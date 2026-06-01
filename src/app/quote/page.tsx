@@ -6,6 +6,7 @@ import { IconCheck } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Request a Quote",
+  alternates: { canonical: "/quote" },
   description:
     "Request a free, no-obligation quote for your construction, renovation or interior project from Arcmarshal Dzine Koncept.",
 };

@@ -12,6 +12,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Contact Us",
+  alternates: { canonical: "/contact" },
   description:
     "Get in touch with Arcmarshal Dzine Koncept. Call, email, WhatsApp or visit us at Army Post Service Estate, Kurudu, Abuja.",
 };

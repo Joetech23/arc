@@ -5,6 +5,7 @@ import { ClosingCTA } from "@/components/home/ClosingCTA";
 
 export const metadata: Metadata = {
   title: "Our Projects",
+  alternates: { canonical: "/portfolio" },
   description:
     "Explore a selection of residential, commercial, industrial, interior and renovation projects delivered by Arcmarshal Dzine Koncept across Nigeria.",
 };

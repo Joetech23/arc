@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat, Raleway } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
@@ -28,6 +28,12 @@ const inter = Inter({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#0F1E2E",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -35,6 +41,10 @@ export const metadata: Metadata = {
     template: `%s | ${site.shortName}`,
   },
   description: site.description,
+  applicationName: site.legalName,
+  category: "business",
+  creator: site.legalName,
+  publisher: site.legalName,
   keywords: [
     "construction company in Abuja",
     "building contractors Kurudu Abuja",
@@ -46,6 +56,8 @@ export const metadata: Metadata = {
     "Arcmarshal Dzine Koncept",
   ],
   authors: [{ name: site.legalName }],
+  alternates: { canonical: "/" },
+  formatDetection: { telephone: true, email: true, address: true },
   openGraph: {
     type: "website",
     locale: "en_NG",
@@ -59,12 +71,25 @@ export const metadata: Metadata = {
     title: `${site.shortName} | Design • Build • Inspire`,
     description: site.description,
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } }
+    : {}),
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
+  "@id": `${site.url}/#organization`,
   name: site.legalName,
   alternateName: site.shortName,
   description: site.description,
@@ -72,6 +97,10 @@ const jsonLd = {
   email: site.email,
   telephone: site.phone,
   slogan: site.tagline,
+  logo: `${site.url}/icon.svg`,
+  image: `${site.url}/opengraph-image.png`,
+  priceRange: "₦₦",
+  currenciesAccepted: "NGN",
   address: {
     "@type": "PostalAddress",
     streetAddress: site.address.line1,
@@ -80,6 +109,11 @@ const jsonLd = {
     addressCountry: "NG",
   },
   areaServed: site.serviceAreas.map((a) => ({ "@type": "City", name: a })),
+  sameAs: [
+    site.socials.instagram,
+    site.socials.facebook,
+    site.socials.tiktok,
+  ],
   knowsAbout: [
     "Residential Construction",
     "Commercial Construction",

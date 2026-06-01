@@ -18,6 +18,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Our Services",
+  alternates: { canonical: "/services" },
   description:
     "Residential, commercial and industrial construction, renovation, real estate, interior design and project management — full-service delivery across Nigeria.",
 };
