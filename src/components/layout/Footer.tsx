@@ -10,6 +10,7 @@ import {
   IconPhone,
   IconPin,
   IconTikTok,
+  IconYouTube,
 } from "@/components/icons";
 
 export function Footer() {
@@ -46,6 +47,7 @@ export function Footer() {
               { href: site.socials.instagram, Icon: IconInstagram, label: "Instagram" },
               { href: site.socials.facebook, Icon: IconFacebook, label: "Facebook" },
               { href: site.socials.tiktok, Icon: IconTikTok, label: "TikTok" },
+              { href: site.socials.youtube, Icon: IconYouTube, label: "YouTube" },
             ].map(({ href, Icon, label }) => (
               <a
                 key={label}

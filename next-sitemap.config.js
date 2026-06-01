@@ -8,6 +8,16 @@ module.exports = {
   generateIndexSitemap: false,
   changefreq: "weekly",
   priority: 0.7,
+  exclude: [
+    "/icon.svg",
+    "/icon.svg/",
+    "/apple-icon.png",
+    "/apple-icon.png/",
+    "/opengraph-image.png",
+    "/opengraph-image.png/",
+    "/manifest.webmanifest",
+    "/manifest.webmanifest/",
+  ],
   robotsTxtOptions: {
     policies: [{ userAgent: "*", allow: "/" }],
     additionalSitemaps: [`${siteUrl}/sitemap.xml`],

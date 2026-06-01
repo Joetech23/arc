@@ -23,9 +23,10 @@ export const site = {
     rcNumber: "RC: ••••••••",
   },
   socials: {
-    instagram: "https://instagram.com/",
-    facebook: "https://facebook.com/",
-    tiktok: "https://tiktok.com/",
+    instagram: "https://www.instagram.com/arcmarshaldzine/",
+    facebook: "https://www.facebook.com/arcmarsha/",
+    tiktok: "https://www.tiktok.com/@arcmarshaldzine",
+    youtube: "https://www.youtube.com/@ArcmarshalDzine",
   },
   builtBy: {
     name: "Eaglescroft",

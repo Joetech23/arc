@@ -113,6 +113,7 @@ const jsonLd = {
     site.socials.instagram,
     site.socials.facebook,
     site.socials.tiktok,
+    site.socials.youtube,
   ],
   knowsAbout: [
     "Residential Construction",
