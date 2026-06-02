@@ -8,8 +8,8 @@ export function Logo({ className = "" }: { className?: string }) {
       <Image
         src="/arcmarshal-logo.png"
         alt="Arcmarshal Dzine Koncept"
-        width={600}
-        height={232}
+        width={1962}
+        height={802}
         priority
         className="h-11 w-auto md:h-12"
       />
