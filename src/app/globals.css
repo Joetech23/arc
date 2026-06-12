@@ -113,6 +113,40 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Gold shine sweep — glides across a card on hover. */
+  .shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.18) 50%,
+      rgba(197, 162, 74, 0.12) 55%,
+      transparent 65%
+    );
+    transform: translateX(-110%);
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+  .shine:hover::after {
+    transform: translateX(110%);
+  }
+
+  /* Photos gain richness on hover. */
+  .img-rich {
+    transition:
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.7s ease;
+  }
+  .group:hover .img-rich {
+    filter: saturate(1.12) contrast(1.03);
+  }
   .hairline {
     @apply h-px w-full bg-gradient-to-r from-transparent via-navy/15 to-transparent;
   }

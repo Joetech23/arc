@@ -63,8 +63,9 @@ export default function ServicesPage() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={s.image}
-                      alt={s.title}
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      alt={`${s.title} by Arcmarshal Dzine Koncept — Abuja, Nigeria`}
+                      loading="lazy"
+                      className="img-rich absolute inset-0 h-full w-full object-cover group-hover:scale-105"
                     />
                   </div>
                   <div className="flex flex-col justify-center md:p-10">

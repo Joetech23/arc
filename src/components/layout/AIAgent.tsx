@@ -72,7 +72,7 @@ function getReply(input: string): Msg {
   if (/(portfolio|project|work|done|gallery|example)/.test(q)) {
     return {
       from: "bot",
-      text: "We've delivered homes, commercial spaces and industrial builds across Nigeria. Take a look at some of our work.",
+      text: "We've delivered real projects across Nigeria — NAOWA Hall at Elele Army Barracks (Port Harcourt), residential developments in Kaduna & Abuja, works at Zamfara Government House, and more. Take a look!",
       actions: [{ label: "See our projects", href: "/portfolio" }],
     };
   }

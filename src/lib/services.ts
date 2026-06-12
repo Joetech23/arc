@@ -45,7 +45,7 @@ export const services: Service[] = [
       "Fast-tracked project scheduling",
     ],
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+      "/images/projects/naowa-hall-construction-elele-army-barracks-port-harcourt.jpeg",
   },
   {
     slug: "industrial",
@@ -120,8 +120,7 @@ export const services: Service[] = [
       "POP, screeding & premium paintwork",
       "Styling & final handover",
     ],
-    image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
+    image: "/images/projects/naowa-hall-interior-pop-ceiling-lighting.jpeg",
   },
   {
     slug: "project-management",

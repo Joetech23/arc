@@ -27,8 +27,8 @@ export function WhyChooseUs() {
           <div className="relative overflow-hidden rounded-3xl">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80"
-              alt="Arcmarshal team reviewing plans on site"
+              src="/images/projects/naowa-hall-elele-port-harcourt-exterior.jpeg"
+              alt="NAOWA Hall built by Arcmarshal at Elele Army Barracks, Port Harcourt"
               className="aspect-[4/5] w-full object-cover"
             />
           </div>

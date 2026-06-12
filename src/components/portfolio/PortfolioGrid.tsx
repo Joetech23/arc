@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { categories, projects, type ProjectCategory } from "@/lib/projects";
 import { IconArrowUpRight } from "@/components/icons";
@@ -44,13 +45,14 @@ export function PortfolioGrid() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-navy"
+              className="group shine relative aspect-[4/3] overflow-hidden rounded-2xl bg-navy"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={p.image}
-                alt={p.title}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-110"
+                alt={`${p.title} — ${p.category.toLowerCase()} project by Arcmarshal Dzine Koncept in ${p.location}, Nigeria`}
+                loading="lazy"
+                className="img-rich absolute inset-0 h-full w-full object-cover group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/20 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-95" />
               <div className="relative flex h-full flex-col justify-end p-6">
@@ -66,9 +68,15 @@ export function PortfolioGrid() {
                   {p.title}
                 </h3>
                 <p className="text-sm text-white/60">
-                  {p.location} · {p.year}
+                  {p.location}
+                  {p.year ? ` · ${p.year}` : ""}
                 </p>
               </div>
+              <Link
+                href={`/portfolio/${p.slug}`}
+                aria-label={`View ${p.title} project details and gallery`}
+                className="absolute inset-0 z-10"
+              />
             </motion.article>
           ))}
         </AnimatePresence>

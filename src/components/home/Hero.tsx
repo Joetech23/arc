@@ -16,8 +16,7 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80",
+    image: "/images/projects/naowa-hall-roofline-architecture-detail.jpeg",
     title: (
       <>
         We turn your <span className="text-gold">boldest ideas</span> into
@@ -40,8 +39,7 @@ const slides: Slide[] = [
       "From private bungalows to luxury duplexes and gated estates — we bring comfort, durability and timeless design to every home we build.",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2000&q=80",
+    image: "/images/projects/naowa-hall-interior-pop-ceiling-lighting.jpeg",
     title: (
       <>
         From foundation to the <span className="text-gold">final finish</span>.

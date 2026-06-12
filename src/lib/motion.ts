@@ -1,11 +1,13 @@
 import type { Variants } from "framer-motion";
 
+/** Premium blur-up reveal: content rises and sharpens into focus. */
 export const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 22 },
+  hidden: { opacity: 0, y: 24, filter: "blur(5px)" },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+    filter: "blur(0px)",
+    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
@@ -22,11 +24,21 @@ export const stagger: Variants = {
 };
 
 export const scaleIn: Variants = {
-  hidden: { opacity: 0, scale: 0.96 },
+  hidden: { opacity: 0, scale: 0.95, filter: "blur(4px)" },
   show: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    filter: "blur(0px)",
+    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+/** Clip-path sweep: content wipes in from the left, like a drawn line. */
+export const clipReveal: Variants = {
+  hidden: { clipPath: "inset(0 100% 0 0)", opacity: 1 },
+  show: {
+    clipPath: "inset(0 0% 0 0)",
+    transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] },
   },
 };
 

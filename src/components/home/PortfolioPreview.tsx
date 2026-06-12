@@ -29,7 +29,7 @@ export function PortfolioPreview() {
             <Reveal
               key={p.title}
               as="article"
-              className={`group relative overflow-hidden rounded-2xl ${
+              className={`group shine relative overflow-hidden rounded-2xl ${
                 i === 0
                   ? "md:col-span-4 md:row-span-2 min-h-[280px] md:min-h-[520px]"
                   : "md:col-span-2 min-h-[240px]"
@@ -38,8 +38,9 @@ export function PortfolioPreview() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={p.image}
-                alt={p.title}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-smooth group-hover:scale-105"
+                alt={`${p.title} — ${p.category.toLowerCase()} project by Arcmarshal Dzine Koncept in ${p.location}, Nigeria`}
+                loading="lazy"
+                className="img-rich absolute inset-0 h-full w-full object-cover group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent opacity-90" />
               <div className="relative flex h-full flex-col justify-end p-6">
@@ -50,9 +51,15 @@ export function PortfolioPreview() {
                   {p.title}
                 </h3>
                 <p className="text-sm text-white/60">
-                  {p.location} · {p.year}
+                  {p.location}
+                  {p.year ? ` · ${p.year}` : ""}
                 </p>
               </div>
+              <Link
+                href={`/portfolio/${p.slug}`}
+                aria-label={`View ${p.title} project details and gallery`}
+                className="absolute inset-0 z-10"
+              />
             </Reveal>
           ))}
         </RevealGroup>

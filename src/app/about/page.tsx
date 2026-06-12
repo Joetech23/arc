@@ -60,8 +60,8 @@ export default function AboutPage() {
           <Reveal className="relative order-2 overflow-hidden rounded-3xl lg:order-1">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=80"
-              alt="Arcmarshal project in progress"
+              src="/images/projects/naowa-hall-port-harcourt-side-elevation.jpeg"
+              alt="Completed NAOWA Hall project by Arcmarshal Dzine Koncept, Elele Army Barracks, Port Harcourt"
               className="aspect-[4/3] w-full object-cover"
             />
           </Reveal>
