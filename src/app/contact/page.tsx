@@ -27,7 +27,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Let's talk about your project."
         subtitle="Whether it's a question, a quote or a coffee on site — we'd love to hear from you."
-        image="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=80"
+        image="/images/projects/millennium-quarters-kaduna-01.jpeg"
         crumb="Contact"
       />
 

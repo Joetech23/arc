@@ -8,7 +8,7 @@ export function ClosingCTA() {
   return (
     <section className="relative overflow-hidden bg-navy py-24 md:py-32">
       <ParallaxImage
-        src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=2000&q=80"
+        src="/images/projects/millennium-quarters-kaduna-cover.jpeg"
         opacity={0.2}
         distance={60}
       />

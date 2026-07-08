@@ -26,7 +26,7 @@ export const services: Service[] = [
       "Turn-key handover, ready to live in",
     ],
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+      "/images/projects/bauchi-duplex-bungalow-02.jpg",
   },
   {
     slug: "commercial",
@@ -64,7 +64,7 @@ export const services: Service[] = [
       "Phased delivery for live operations",
     ],
     image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1600&q=80",
+      "/images/projects/zamfara-generator-house-cover.jpg",
   },
   {
     slug: "renovation",
@@ -83,7 +83,7 @@ export const services: Service[] = [
       "Heritage-sensitive restorations",
     ],
     image:
-      "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=1600&q=80",
+      "/images/projects/minimah-farm-port-harcourt-cover.jpg",
   },
   {
     slug: "real-estate",
@@ -102,7 +102,7 @@ export const services: Service[] = [
       "Build-ready packages available",
     ],
     image:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80",
+      "/images/projects/millennium-quarters-kaduna-cover.jpeg",
   },
   {
     slug: "interior",
@@ -139,7 +139,7 @@ export const services: Service[] = [
       "Transparent client reporting",
     ],
     image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80",
+      "/images/projects/bauchi-duplex-bungalow-21.jpg",
   },
 ];
 

@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
       <PageHero
         eyebrow="Legal"
         title="Privacy Policy"
-        image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2000&q=80"
+        image="/images/projects/5-battalion-hq-elele-cover.jpg"
         crumb="Privacy"
       />
       <section className="section-pad">

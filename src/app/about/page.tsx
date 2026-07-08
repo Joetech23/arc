@@ -50,7 +50,7 @@ export default function AboutPage() {
         eyebrow="About Us"
         title="Bringing dreams into reality, one build at a time."
         subtitle="We're a Nigerian design and construction company driven by craft, integrity and a belief that great buildings change lives."
-        image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
+        image="/images/projects/minimah-farm-port-harcourt-cover.jpg"
         crumb="About"
       />
 

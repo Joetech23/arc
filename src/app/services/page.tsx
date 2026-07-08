@@ -40,7 +40,7 @@ export default function ServicesPage() {
         eyebrow="Our Services"
         title="Everything you need to design, build and finish."
         subtitle="One accountable team across the full project lifecycle — from the first concept sketch to the final handover."
-        image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80"
+        image="/images/projects/bauchi-duplex-bungalow-cover.jpg"
         crumb="Services"
       />
 

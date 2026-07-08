@@ -2,7 +2,6 @@ export type ProjectCategory =
   | "Residential"
   | "Commercial"
   | "Industrial"
-  | "Interior"
   | "Renovation";
 
 export type Project = {
@@ -18,16 +17,12 @@ export type Project = {
   scope: string[];
   /** Cover photo used on cards and the page hero. */
   image: string;
-  /** Full photo gallery for the project page. */
+  /** Full photo gallery for the project page (cover first). */
   gallery: string[];
   featured?: boolean;
 };
 
-/**
- * Real Arcmarshal projects. NAOWA Hall photos are the client's own.
- * Projects still using Unsplash placeholder covers are marked — swap
- * when the client supplies photos (add them to `gallery` too).
- */
+/** Every project below uses the client's own real photographs. */
 export const projects: Project[] = [
   {
     slug: "naowa-hall-elele-army-barracks",
@@ -36,7 +31,7 @@ export const projects: Project[] = [
     location: "Port Harcourt",
     client: "Nigerian Army Officers' Wives Association (NAOWA)",
     description:
-      "Full design and construction of a multipurpose event hall for the Nigerian Army Officers' Wives Association at 5 Battalion, Elele Army Barracks. Delivered from foundation to finish — structure, roofing, premium POP ceilings with cove lighting, and external works — and commissioned with army officials on site.",
+      "Full design and construction of a multipurpose event hall for the Nigerian Army Officers' Wives Association at 5 Battalion, Elele Army Barracks. Delivered from foundation to finish — structure, roofing, premium POP ceilings with cove lighting and external works — and commissioned with army officials on site.",
     scope: [
       "Structural works & block construction",
       "Long-span roofing installation",
@@ -56,133 +51,166 @@ export const projects: Project[] = [
       "/images/projects/naowa-hall-veranda-paintwork-detail.jpeg",
       "/images/projects/naowa-hall-interior-pop-ceiling-lighting.jpeg",
       "/images/projects/naowa-hall-cove-lighting-interior-finishing.jpeg",
+      "/images/projects/naowa-hall-interior-ceiling-design.jpeg",
       "/images/projects/naowa-hall-official-site-visit-elele.jpeg",
       "/images/projects/naowa-hall-site-inspection-army-officials.jpeg",
     ],
     featured: true,
   },
   {
-    slug: "naowa-hall-interior-finishing",
-    title: "NAOWA Hall — Interior Finishing & POP Lighting",
-    category: "Interior",
-    location: "Port Harcourt",
-    client: "Nigerian Army Officers' Wives Association (NAOWA)",
+    slug: "bauchi-duplex-and-bungalow",
+    title: "5-Bedroom Duplex & 3-Bedroom Bungalow, Bauchi",
+    category: "Residential",
+    location: "Bauchi",
+    year: "2024",
     description:
-      "Complete interior finishing package for the NAOWA multipurpose hall: layered POP ceiling design with concealed cove lighting, recessed downlights, smooth wall finishing and premium paintwork — turning a bare hall into a warm, event-ready space.",
+      "Ground-up design and construction of a contemporary 5-bedroom duplex and a 3-bedroom bungalow in Bauchi State, completed in 2024. Our in-house team delivered the project end to end — from setting out and reinforced columns through the structural frame to a clean, modern flat-roof finish.",
     scope: [
-      "Layered POP ceiling design",
-      "Concealed cove (indirect) lighting",
-      "Recessed downlight installation",
-      "Wall screeding & smooth finishing",
-      "Premium interior paintwork",
+      "Architectural design & 3D visualisation",
+      "Reinforced foundations & columns",
+      "Structural frame & slab work",
+      "Contemporary flat-roof construction",
+      "Windows, doors & external works",
+      "Modern finishing & painting",
     ],
-    image: "/images/projects/naowa-hall-interior-pop-ceiling-lighting.jpeg",
+    image: "/images/projects/bauchi-duplex-bungalow-cover.jpg",
     gallery: [
-      "/images/projects/naowa-hall-interior-pop-ceiling-lighting.jpeg",
-      "/images/projects/naowa-hall-cove-lighting-interior-finishing.jpeg",
-      "/images/projects/naowa-hall-interior-ceiling-design.jpeg",
+      "/images/projects/bauchi-duplex-bungalow-cover.jpg",
+      "/images/projects/bauchi-duplex-bungalow-01.jpg",
+      "/images/projects/bauchi-duplex-bungalow-02.jpg",
+      "/images/projects/bauchi-duplex-bungalow-03.jpg",
+      "/images/projects/bauchi-duplex-bungalow-04.jpg",
+      "/images/projects/bauchi-duplex-bungalow-05.jpg",
+      "/images/projects/bauchi-duplex-bungalow-06.jpg",
+      "/images/projects/bauchi-duplex-bungalow-07.jpg",
+      "/images/projects/bauchi-duplex-bungalow-08.jpg",
+      "/images/projects/bauchi-duplex-bungalow-09.jpg",
+      "/images/projects/bauchi-duplex-bungalow-10.jpg",
+      "/images/projects/bauchi-duplex-bungalow-11.jpg",
+      "/images/projects/bauchi-duplex-bungalow-12.jpg",
+      "/images/projects/bauchi-duplex-bungalow-13.jpg",
+      "/images/projects/bauchi-duplex-bungalow-14.jpg",
+      "/images/projects/bauchi-duplex-bungalow-15.jpg",
+      "/images/projects/bauchi-duplex-bungalow-16.jpg",
+      "/images/projects/bauchi-duplex-bungalow-17.jpg",
+      "/images/projects/bauchi-duplex-bungalow-18.jpg",
+      "/images/projects/bauchi-duplex-bungalow-19.jpg",
+      "/images/projects/bauchi-duplex-bungalow-20.jpg",
+      "/images/projects/bauchi-duplex-bungalow-21.jpg",
+      "/images/projects/bauchi-duplex-bungalow-22.jpg",
+      "/images/projects/bauchi-duplex-bungalow-23.jpg",
+      "/images/projects/bauchi-duplex-bungalow-24.jpg",
+      "/images/projects/bauchi-duplex-bungalow-25.jpg",
+      "/images/projects/bauchi-duplex-bungalow-26.jpg",
+      "/images/projects/bauchi-duplex-bungalow-27.jpg",
     ],
     featured: true,
   },
   {
-    slug: "six-bedroom-millennium-quarters-kaduna",
+    slug: "millennium-quarters-residence-kaduna",
     title: "6-Bedroom Residential Development, Millennium Quarters",
     category: "Residential",
     location: "Kaduna",
     description:
-      "A spacious 6-bedroom private residential development in Millennium Quarters, Kaduna State — designed and built for modern family living with generous living spaces and quality finishes throughout.",
+      "A spacious 6-bedroom private residence in Millennium Quarters, Kaduna — designed and built for comfortable modern family living and finished with a bespoke ornamental gate, perimeter fencing and compound lighting.",
     scope: [
       "Architectural design & approvals",
       "Full structural construction",
-      "Roofing, plumbing & electrical works",
-      "Interior & exterior finishing",
-    ],
-    // TODO: replace with client photo when available
-    image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1400&q=80",
-    gallery: [],
-    featured: true,
-  },
-  {
-    slug: "fepa-quarters-apartments-karu-abuja",
-    title: "6 Units of 4-Bedroom Apartments, FEPA Quarters, Karu",
-    category: "Residential",
-    location: "Abuja",
-    year: "2018",
-    description:
-      "Construction of six units of 4-bedroom apartments at FEPA Quarters, Karu, Abuja — a multi-unit residential development delivered in 2018, combining efficient layouts with durable, low-maintenance finishes.",
-    scope: [
-      "Multi-unit residential construction",
-      "Structural & block work for 6 units",
       "Roofing & external works",
-      "Complete fit-out & finishing",
+      "Interior & exterior finishing",
+      "Ornamental gate & perimeter fencing",
+      "Compound & security lighting",
     ],
-    // TODO: replace with client photo when available
-    image:
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1400&q=80",
-    gallery: [],
+    image: "/images/projects/millennium-quarters-kaduna-cover.jpeg",
+    gallery: [
+      "/images/projects/millennium-quarters-kaduna-cover.jpeg",
+      "/images/projects/millennium-quarters-kaduna-01.jpeg",
+      "/images/projects/millennium-quarters-kaduna-02.jpeg",
+      "/images/projects/millennium-quarters-kaduna-03.jpeg",
+      "/images/projects/millennium-quarters-kaduna-04.jpeg",
+      "/images/projects/millennium-quarters-kaduna-05.jpeg",
+      "/images/projects/millennium-quarters-kaduna-06.jpeg",
+      "/images/projects/millennium-quarters-kaduna-07.jpeg",
+      "/images/projects/millennium-quarters-kaduna-08.jpeg",
+      "/images/projects/millennium-quarters-kaduna-09.jpeg",
+      "/images/projects/millennium-quarters-kaduna-10.jpeg",
+      "/images/projects/millennium-quarters-kaduna-11.jpeg",
+    ],
     featured: true,
   },
   {
-    slug: "generator-house-zamfara-government-house",
+    slug: "minimah-farm-renovation-port-harcourt",
+    title: "Lt. Gen. Kenneth Minimah Farm Renovation",
+    category: "Renovation",
+    location: "Port Harcourt",
+    year: "2023",
+    client: "Lt. Gen. Kenneth Minimah (Rtd)",
+    description:
+      "Renovation and refurbishment of Lt. General Kenneth Minimah's country home and farm in Port Harcourt, completed in 2023 — restoring the two-storey residence and its grounds with fresh finishes, structural repairs and landscaped surroundings.",
+    scope: [
+      "Full building refurbishment",
+      "External repainting & finishing",
+      "Roof & structural repairs",
+      "Compound paving & landscaping",
+      "Fixtures & general renovation works",
+    ],
+    image: "/images/projects/minimah-farm-port-harcourt-cover.jpg",
+    gallery: [
+      "/images/projects/minimah-farm-port-harcourt-cover.jpg",
+      "/images/projects/minimah-farm-port-harcourt-01.jpg",
+      "/images/projects/minimah-farm-port-harcourt-02.jpg",
+      "/images/projects/minimah-farm-port-harcourt-03.jpg",
+      "/images/projects/minimah-farm-port-harcourt-04.jpg",
+    ],
+    featured: true,
+  },
+  {
+    slug: "zamfara-government-house-generator",
     title: "Generator House, Zamfara State Government House",
     category: "Industrial",
     location: "Zamfara",
     year: "2020",
     client: "Zamfara State Government",
     description:
-      "Design and construction of a dedicated generator house at the Zamfara State Government House in 2020 — a purpose-built utility facility engineered for ventilation, noise control and safe, serviceable power infrastructure.",
+      "Design and construction of a dedicated generator house at the Zamfara State Government House, completed in 2020 — a purpose-built power facility engineered for safe housing of standby generators, fuel storage and proper ventilation.",
     scope: [
       "Purpose-built utility structure",
-      "Reinforced foundations & flooring",
-      "Ventilation & acoustic considerations",
-      "Power infrastructure provisions",
+      "Reinforced base & access ramp",
+      "Ventilation & louvre screening",
+      "Fuel storage provision",
+      "Secure housing & finishing",
     ],
-    // TODO: replace with client photo when available
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=80",
-    gallery: [],
+    image: "/images/projects/zamfara-generator-house-cover.jpg",
+    gallery: [
+      "/images/projects/zamfara-generator-house-cover.jpg",
+      "/images/projects/zamfara-generator-house-01.jpg",
+      "/images/projects/zamfara-generator-house-02.jpg",
+    ],
     featured: true,
   },
   {
-    slug: "army-blocks-renovation-elele",
-    title: "Renovation of 9 Army Blocks, Elele Army Barracks",
+    slug: "5-battalion-hq-renovation-elele",
+    title: "5 Battalion Headquarters Renovation, Elele Barracks",
     category: "Renovation",
     location: "Port Harcourt",
     year: "2022",
     client: "Nigerian Army",
     description:
-      "Comprehensive renovation of nine accommodation blocks at Elele Army Barracks in 2022 — structural repairs, re-roofing, plumbing and electrical upgrades, and complete refinishing to restore the blocks to full service.",
+      "Renovation of the 5 Battalion Headquarters building at Elele Army Barracks, Port Harcourt, completed in 2022 — a comprehensive re-roofing, refinishing and upgrade of the long-span administrative block.",
     scope: [
-      "Structural repairs across 9 blocks",
-      "Re-roofing & ceiling replacement",
-      "Plumbing & electrical upgrades",
-      "Full repainting & refinishing",
+      "Re-roofing of administrative block",
+      "Structural repairs",
+      "Window & facade upgrades",
+      "Repainting & refinishing",
+      "External works",
     ],
-    // TODO: replace with client photo when available
-    image:
-      "https://images.unsplash.com/photo-1503174971373-b1f69850bded?auto=format&fit=crop&w=1400&q=80",
-    gallery: [],
-    featured: true,
-  },
-  {
-    slug: "protestant-church-renovation-elele",
-    title: "Protestant Church Renovation, Elele Army Barracks",
-    category: "Renovation",
-    location: "Port Harcourt",
-    client: "Nigerian Army",
-    description:
-      "Renovation of the Protestant church at Elele Army Barracks, Port Harcourt — restoring and upgrading the worship space with structural repairs, new finishes and improved comfort for the barracks community.",
-    scope: [
-      "Structural assessment & repairs",
-      "Roof & ceiling restoration",
-      "Interior refinishing & painting",
-      "Fixtures & comfort upgrades",
+    image: "/images/projects/5-battalion-hq-elele-cover.jpg",
+    gallery: [
+      "/images/projects/5-battalion-hq-elele-cover.jpg",
+      "/images/projects/5-battalion-hq-elele-01.jpg",
+      "/images/projects/5-battalion-hq-elele-02.jpg",
+      "/images/projects/5-battalion-hq-elele-03.jpg",
     ],
-    // TODO: replace with client photo when available
-    image:
-      "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=1400&q=80",
-    gallery: [],
   },
 ];
 
@@ -191,7 +219,6 @@ export const categories: ("All" | ProjectCategory)[] = [
   "Residential",
   "Commercial",
   "Industrial",
-  "Interior",
   "Renovation",
 ];
 

@@ -25,7 +25,7 @@ export default function QuotePage() {
         eyebrow="Request a Quote"
         title="Get a free quote for your project."
         subtitle="Share a few details and our team will come back with ideas, timelines and a transparent estimate."
-        image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80"
+        image="/images/projects/bauchi-duplex-bungalow-21.jpg"
         crumb="Quote"
       />
 
